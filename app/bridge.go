@@ -15,7 +15,7 @@ func (ap *AssetPrice) Opts() *bridges.Opts {
 	return &bridges.Opts{
 		Name:   "Asset Price",
 		Lambda: true,
-		Path:   "/price",
+		Path:   "/",
 	}
 }
 
