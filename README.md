@@ -74,6 +74,14 @@ the adaptor to be compatible with Lambda.
 
 To call the API, you need to send a POST request to `http://localhost:<port>/price` with the request body being of the ChainLink `RunResult` type.
 
+Python example:
+```
+import requests
+import json
+r = requests.post("https://chainlink-ea-esp-ghzjwthxsq-uc.a.run.app/asset-price?key=" + os.getenv("ASSETPRICE_KEY"), data='{"data": { "base": "BTC", "quote": "USD" }}')
+r.json()
+```
+
 For example:
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{ "jobRunId": "1234", "data": { "base": "BTC", "quote": "USD" }}' http://localhost:8080/price
